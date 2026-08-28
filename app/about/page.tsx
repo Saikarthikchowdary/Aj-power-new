@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import FooterMap from "@/components/FooterMap";
-import { CITIES, CityKey } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -11,7 +9,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="page active">
-      <div className="litepage"><div className="inwrap">
+      <div className="litepage aboutpage"><div className="inwrap">
         <div className="abgrid" style={{ gridTemplateColumns: "1fr" }}>
           <div className="txt">
             <p><b>AJ POWER SOLUTIONS</b> is a leader in every aspect of electrical construction, maintenance and service — one of the reputed specialized HT &amp; LT electrical contractors in South India for commercial, industrial, residential and IT sectors, equipped to handle the challenges and complexities of any job.</p>
@@ -83,21 +81,6 @@ export default function AboutPage() {
             <small>Founder &amp; Director</small>
             <h3>Jeevan B.S</h3>
             <p>Extensive experience across electrical supply and distribution networks — heading administration, sales, engineering, project execution and finance, with exposure both in India and overseas.</p>
-          </div>
-        </div>
-
-        <h2 className="secthead">Our Offices</h2>
-        <div className="ctcard">
-          <div className="ctaddrs">
-            {(Object.keys(CITIES) as CityKey[]).map((key) => {
-              const c = CITIES[key];
-              return (
-                <p className="ctaddr" key={key}><b>{c.name} — {c.tag}:</b> {c.desc}</p>
-              );
-            })}
-            <div className="ctaddr-map">
-              <FooterMap light label="View our full presence →" />
-            </div>
           </div>
         </div>
       </div></div>

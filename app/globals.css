@@ -341,6 +341,14 @@ section .wrap,section .stack{width:100%}
   .statbar .n{font-size:clamp(1.05rem,4.4vw,1.6rem)}
   .statbar .l{font-size:.7rem;margin-top:6px;line-height:1.35}
   .glass{padding:32px 22px}
+  /* Mobile hero: drop the copy card entirely and let the scrolling image wall
+     stand on its own. Scoped to .hero so glass panels elsewhere are unaffected.
+     .wall is absolutely positioned, so with the card gone the section has no
+     in-flow content left to size against - hence the explicit height, which
+     matches the wall (3 rows x 190px + 2 x 6px gap) instead of leaving big
+     empty bands above and below it. */
+  .hero .glass{display:none}
+  section.hero.slideframe{min-height:0;height:594px}
   .wall .roww img{width:200px;height:190px}
   .brand .mk{width:76px;height:76px}
   .brand .txt b{font-size:1.1rem}.brand .txt small{font-size:.58rem;letter-spacing:.18em}
@@ -579,17 +587,24 @@ section .wrap,section .stack{width:100%}
 .ctmap{width:100%;flex:1;min-height:220px;border:0;border-radius:12px;margin-top:18px}
 
 /* global footer used on light pages */
-.sitefooter{background:var(--teal-500);color:rgba(255,255,255,.92);padding:56px 0 26px}
-.sitefooter .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.5fr 1.3fr;column-gap:40px;row-gap:22px;max-width:1240px;margin:0 auto;padding:0 28px;align-items:start}
+/* Footer scaled down 10% (padding, type, gaps and the presence map). */
+.sitefooter{background:var(--teal-500);color:rgba(255,255,255,.92);padding:50px 0 23px}
+.sitefooter .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.5fr 1.3fr;column-gap:36px;row-gap:20px;max-width:1240px;margin:0 auto;padding:0 28px;align-items:start}
 .sitefooter .fgrid > div:nth-child(1){grid-column:1}
 .sitefooter .fgrid > div:nth-child(2){grid-column:2}
 .sitefooter .fgrid > div:nth-child(3){grid-column:3}
 .sitefooter .fgrid > div:nth-child(4){grid-column:4;grid-row:1 / span 2}
-.sitefooter h4{color:#fff;font-size:1.2rem;font-weight:800;margin-bottom:14px}
-.sitefooter p,.sitefooter li{font-size:.95rem;font-weight:500;line-height:1.85}
+.sitefooter h4{color:#fff;font-size:1.08rem;font-weight:800;margin-bottom:13px}
+.sitefooter p,.sitefooter li{font-size:.855rem;font-weight:500;line-height:1.85}
 .sitefooter ul{list-style:none}
 .sitefooter a:hover{color:#2ecc71}
-.sitefooter .fcopy{grid-column:1 / span 3;max-width:none;margin:0;border-top:1px solid rgba(255,255,255,.2);padding-top:22px;text-align:left;font-size:.86rem;color:rgba(255,255,255,.65)}
+.sitefooter .fcopy{grid-column:1 / span 3;max-width:none;margin:0;border-top:1px solid rgba(255,255,255,.2);padding-top:20px;text-align:left;font-size:.77rem;color:rgba(255,255,255,.65)}
+/* Presence map scaled with the rest of the footer. Scoped to .sitefooter so the
+   inline maps on the About and Contact pages keep their own size. */
+.sitefooter .fmap,
+.v2-scope .sitefooter .fmap{max-width:243px}
+.sitefooter .fmap-cta,
+.v2-scope .sitefooter .fmap-cta{font-size:.77rem}
 
 @media(max-width:1000px){.prgrid{grid-template-columns:1fr 1fr}.sdbody,.ctgrid{grid-template-columns:1fr}
   .sitefooter .fgrid{grid-template-columns:1fr 1fr}
@@ -1357,6 +1372,7 @@ html {scroll-behavior:smooth}
 
 
 .v2-scope .litepage {background:var(--bg);color:var(--body-text);min-height:calc(100vh - 90px);padding:70px 24px 90px}
+.v2-scope .litepage.aboutpage {background:#EBF5F7}
 .v2-scope .litepage .inwrap {max-width:1240px;margin:0 auto}
 .v2-scope .ptitle {font-size:clamp(1.8rem,3.4vw,2.6rem);color:var(--ink);letter-spacing:-.03em}
 .v2-scope .ptitle .g {color:var(--teal-600)}
@@ -1410,17 +1426,17 @@ html {scroll-behavior:smooth}
 .v2-scope .ctaddr-map .fmap-cta {display:block;text-align:right;margin-top:10px}
 
 
-.v2-scope .sitefooter {background:var(--teal-500);color:rgba(255,255,255,.92);padding:60px 0 26px}
-.v2-scope .sitefooter .fgrid {display:grid;grid-template-columns:1.4fr 1fr 1.5fr 1.3fr;column-gap:40px;row-gap:22px;max-width:1240px;margin:0 auto;padding:0 28px;align-items:start}
+.v2-scope .sitefooter {background:var(--teal-500);color:rgba(255,255,255,.92);padding:54px 0 23px}
+.v2-scope .sitefooter .fgrid {display:grid;grid-template-columns:1.4fr 1fr 1.5fr 1.3fr;column-gap:36px;row-gap:20px;max-width:1240px;margin:0 auto;padding:0 28px;align-items:start}
 .v2-scope .sitefooter .fgrid > div:nth-child(1) {grid-column:1}
 .v2-scope .sitefooter .fgrid > div:nth-child(2) {grid-column:2}
 .v2-scope .sitefooter .fgrid > div:nth-child(3) {grid-column:3}
 .v2-scope .sitefooter .fgrid > div:nth-child(4) {grid-column:4;grid-row:1 / span 2}
-.v2-scope .sitefooter h4 {color:#fff;font-size:1.12rem;font-weight:700;margin-bottom:16px;font-family:var(--font-display),sans-serif}
+.v2-scope .sitefooter h4 {color:#fff;font-size:1.01rem;font-weight:700;margin-bottom:14px;font-family:var(--font-display),sans-serif}
 .v2-scope .sitefooter p,
-.v2-scope .sitefooter li {font-size:.94rem;font-weight:500;line-height:1.85}
+.v2-scope .sitefooter li {font-size:.846rem;font-weight:500;line-height:1.85}
 .v2-scope .sitefooter a:hover {color:var(--emerald-500)}
-.v2-scope .sitefooter .fcopy {grid-column:1 / span 3;max-width:none;margin:0;border-top:1px solid rgba(255,255,255,.2);padding-top:22px;text-align:left;font-size:.86rem;color:rgba(255,255,255,.65)}
+.v2-scope .sitefooter .fcopy {grid-column:1 / span 3;max-width:none;margin:0;border-top:1px solid rgba(255,255,255,.2);padding-top:20px;text-align:left;font-size:.77rem;color:rgba(255,255,255,.65)}
 @media(max-width:1000px) {.v2-scope .prgrid {grid-template-columns:1fr 1fr}
 .v2-scope .sdbody,
 .v2-scope .ctgrid {grid-template-columns:1fr}
@@ -1442,6 +1458,7 @@ html {scroll-behavior:smooth}
 
 
 :root[data-theme="dark"] .v2-scope .litepage {background:#0A1626;color:#C3D2DF}
+:root[data-theme="dark"] .v2-scope .litepage.aboutpage {background:#0A1626}
 :root[data-theme="dark"] .v2-scope .pagehero .curve {background:#0A1626}
 :root[data-theme="dark"] .v2-scope .ptitle {color:var(--teal-300)}
 :root[data-theme="dark"] .v2-scope .psub {color:#A9BBCA}

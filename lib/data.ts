@@ -13,7 +13,8 @@ export const SERVICES: Service[] = [
     id: "design-engineering",
     no: "01",
     t: "Design & Engineering",
-    img: "https://images.unsplash.com/photo-1713557112617-e12d67bddc3a?auto=format&fit=crop&w=1600&q=85",
+    // user-supplied: electrical schematic with terminal block and pliers
+    img: "/images/services/design.jpg",
     s: "Site-specific design, load planning and compliance documentation.",
     d: [
       "Our in-house Design, Engineering, Estimation, Documentation and Procurement teams work in tandem from the core of the project to produce detailed pre-construction, Good-for-Construction and coordination drawings.",
@@ -31,7 +32,9 @@ export const SERVICES: Service[] = [
     id: "ht-lt-works",
     no: "02",
     t: "HT & LT Works",
-    img: "https://images.unsplash.com/photo-1693013112835-5f3128bb555f?auto=format&fit=crop&w=1600&q=85",
+    // row of LT/HT switchgear panels - matches "HT & LT panel installation" and
+    // "power distribution systems"
+    img: "https://images.unsplash.com/photo-1604251806132-6b149e8e6730?auto=format&fit=crop&w=1600&q=85",
     s: "High- and low-tension panels, distribution and electrification at any scale.",
     d: [
       "We have the ability and expertise across the entire HT and LT electrical system — panels, distribution and complete electrification for projects of any scale.",
@@ -49,7 +52,8 @@ export const SERVICES: Service[] = [
     id: "internal-electrification",
     no: "03",
     t: "Internal Electrification",
-    img: "https://images.unsplash.com/photo-1576446470246-499c738d1c8e?auto=format&fit=crop&w=1600&q=85",
+    // user-supplied: hands fitting a component into an open distribution board
+    img: "/images/services/internal.jpg",
     s: "Complete internal wiring executed cleanly to standard.",
     d: [
       "Complete internal wiring and electrification works executed cleanly to standard — for IT parks, data centres, industries, hospitals, and residential and commercial projects.",
@@ -67,7 +71,8 @@ export const SERVICES: Service[] = [
     id: "lighting-management",
     no: "04",
     t: "Lighting Management",
-    img: "https://images.unsplash.com/photo-1652540166492-4b700df31f56?auto=format&fit=crop&w=1600&q=85",
+    // user-supplied: commercial lobby with an integrated recessed/linear lighting scheme
+    img: "/images/services/lighting.webp",
     s: "Lighting systems designed for efficiency and control.",
     d: [
       "AJ Power Solutions has a dedicated design team providing the latest light-fixture details according to project requirements, along with complete lighting design calculations.",
@@ -85,7 +90,8 @@ export const SERVICES: Service[] = [
     id: "testing-commissioning",
     no: "05",
     t: "Testing & Commissioning",
-    img: "https://images.unsplash.com/photo-1758101755915-462eddc23f57?auto=format&fit=crop&w=1600&q=85",
+    // user-supplied: engineer using a clamp meter to test live panel contactors
+    img: "/images/services/testing.jpg",
     s: "Testing, commissioning and CEIG / Board liaisoning end to end.",
     d: [
       "Comprehensive testing, commissioning and certification for electrical installations — handled end to end including all liaisoning works related to Electricity CEIG / Board.",
@@ -103,7 +109,9 @@ export const SERVICES: Service[] = [
     id: "maintenance-service",
     no: "06",
     t: "Maintenance & Service",
-    img: "https://images.unsplash.com/photo-1635335874521-7987db781153?auto=format&fit=crop&w=1600&q=85",
+    // technician in PPE actively servicing equipment - the previous image was a
+    // static panel (no service activity) and near-identical to Internal Electrification
+    img: "https://images.unsplash.com/photo-1595831708961-1b13c0dd2422?auto=format&fit=crop&w=1600&q=85",
     s: "Preventive maintenance backed by a 24-hour service department.",
     d: [
       "Electrical maintenance is an important part of the electrical system that keeps industries and facilities running effectively. Our twenty-four-hour service department keeps us connected to our customers whenever we are needed.",
@@ -197,9 +205,16 @@ export const CITIES: Record<CityKey, { tag: string; name: string; desc: string; 
 // AI-generated set, which carried a heavy teal grade that no colour correction
 // could make read as genuine. Sized for display (800px wide) rather than the
 // 2400px originals.
+// HeroWall deals these into three marquee rows by index % 3, so row membership is
+// 0,3,6,9 / 1,4,7,10 / 2,5,8,11. The order below is deliberate: it keeps each row
+// free of repeated subjects, and swaps the top and bottom rows relative to the
+// original numbering.
+//   row 1 -> switchgear corridor, green pylon, substation + hills, transformer
+//   row 2 -> lattice tower, switchgear insulators, tower lattice from below, substation
+//   row 3 -> pylon over field, worker on tower, data centre, lineman
 export const HERO_PICS = [
-  "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg",
-  "07.jpg", "08.jpg", "09.jpg", "10.jpg", "11.jpg", "12.jpg",
+  "03.jpg", "02.jpg", "12.jpg", "06.jpg", "05.jpg", "04.jpg",
+  "09.jpg", "08.jpg", "07.jpg", "01.jpg", "11.jpg", "10.jpg",
 ].map((f) => `/images/hero/${f}`);
 
 export const GALLERY_STOCK = [
