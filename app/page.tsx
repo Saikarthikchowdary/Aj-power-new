@@ -27,7 +27,6 @@ export default function HomePage() {
           <div className="acts">
             <Link className="btn btn-g" href="/services">Explore Services</Link>
             <Link className="btn btn-w" href="/contact">Get in Touch</Link>
-            <Link className="btn btn-w" href="/admin/login">Admin Login</Link>
           </div>
           <div className="soc">
             <a href="https://www.linkedin.com/in/aj-power-solutions-a887b316b/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
@@ -94,7 +93,7 @@ export default function HomePage() {
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="7" r="4" /><path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" /><path d="M17 3.5a4 4 0 0 1 0 7.5" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /></svg>
                 </div>
                 <h3 className="mt-5 text-[1.2rem]" style={{ color: "var(--ink)" }}>Expert Leadership</h3>
-                <p className="mt-2 text-[.92rem] font-medium leading-relaxed" style={{ color: "var(--body-text)" }}>Directors with over two decades each in HT &amp; LT contracting, collaborating with JLL, CBRE, Savills, RSP and Semac.</p>
+                <p className="mt-2 text-[.92rem] font-medium leading-relaxed" style={{ color: "var(--body-text)" }}>Directors with over two decades of experience in HT &amp; LT contracting, collaborating with architects, clients, industry leaders, JLL, CBRE, Savills, RSP and Semac.</p>
               </div>
 
               <div

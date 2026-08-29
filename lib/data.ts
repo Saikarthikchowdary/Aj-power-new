@@ -13,7 +13,7 @@ export const SERVICES: Service[] = [
     id: "design-engineering",
     no: "01",
     t: "Design & Engineering",
-    // user-supplied: electrical schematic with terminal block and pliers
+    // user-supplied: design team reviewing the electrical model and GFC drawings
     img: "/images/services/design.jpg",
     s: "Site-specific design, load planning and compliance documentation.",
     d: [
@@ -24,7 +24,7 @@ export const SERVICES: Service[] = [
       "Detailed designing & estimation",
       "Load planning & value engineering",
       "GFC & coordination drawings",
-      "CEIG / Board liaisoning",
+      "Statutory approvals & Board liaisoning",
       "Compliance documentation",
     ],
   },
@@ -32,9 +32,9 @@ export const SERVICES: Service[] = [
     id: "ht-lt-works",
     no: "02",
     t: "HT & LT Works",
-    // row of LT/HT switchgear panels - matches "HT & LT panel installation" and
-    // "power distribution systems"
-    img: "https://images.unsplash.com/photo-1604251806132-6b149e8e6730?auto=format&fit=crop&w=1600&q=85",
+    // user-supplied: HT yard and LT panel room either side of a step-down
+    // transformer - matches "HT & LT panel installation" and "substation works"
+    img: "/images/services/ht-lt.jpg",
     s: "High- and low-tension panels, distribution and electrification at any scale.",
     d: [
       "We have the ability and expertise across the entire HT and LT electrical system — panels, distribution and complete electrification for projects of any scale.",
@@ -71,8 +71,8 @@ export const SERVICES: Service[] = [
     id: "lighting-management",
     no: "04",
     t: "Lighting Management",
-    // user-supplied: commercial lobby with an integrated recessed/linear lighting scheme
-    img: "/images/services/lighting.webp",
+    // user-supplied: office floor on an integrated linear lighting scheme
+    img: "/images/services/lighting.jpg",
     s: "Lighting systems designed for efficiency and control.",
     d: [
       "AJ Power Solutions has a dedicated design team providing the latest light-fixture details according to project requirements, along with complete lighting design calculations.",
@@ -90,17 +90,17 @@ export const SERVICES: Service[] = [
     id: "testing-commissioning",
     no: "05",
     t: "Testing & Commissioning",
-    // user-supplied: engineer using a clamp meter to test live panel contactors
+    // user-supplied: technician testing a panel's busbar terminations
     img: "/images/services/testing.jpg",
-    s: "Testing, commissioning and CEIG / Board liaisoning end to end.",
+    s: "Testing, commissioning and statutory approvals end to end.",
     d: [
-      "Comprehensive testing, commissioning and certification for electrical installations — handled end to end including all liaisoning works related to Electricity CEIG / Board.",
+      "Comprehensive testing, commissioning and certification for electrical installations — handled end to end including all liaisoning works related to statutory approvals and the Electricity Board.",
       "Dedicated EHS and QC teams ensure every installation is verified, certified and handed over safely.",
     ],
     k: [
       "Installation testing",
       "Commissioning & certification",
-      "CEIG / Board liaisoning",
+      "Statutory approvals & Board liaisoning",
       "EHS & QC verification",
       "Safe handover",
     ],
