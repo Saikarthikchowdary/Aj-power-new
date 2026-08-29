@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import JourneyRoad from "@/components/JourneyRoad";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -12,32 +13,23 @@ export default function AboutPage() {
       <div className="litepage aboutpage"><div className="inwrap">
         <div className="abgrid" style={{ gridTemplateColumns: "1fr" }}>
           <div className="txt">
-            <p><b>AJ POWER SOLUTIONS</b> is a leader in every aspect of electrical construction, maintenance and service — one of the reputed specialized HT &amp; LT electrical contractors in South India for commercial, industrial, residential and IT sectors, equipped to handle the challenges and complexities of any job.</p>
+            <p><b>AJ POWER SOLUTIONS</b> is a leader in every aspect of electrical construction, maintenance and service — one of the reputed specialized HT &amp; LT electrical contractors across India for commercial, industrial, residential and IT sectors, equipped to handle the challenges and complexities of any job.</p>
             <p>We bring a dedication to safety, integrity and dependability to every job. Integrity, honesty, perseverance, respect and service — these are the true values embraced by each and every AJ Power Solutions employee. Our projects can be complex, but our ethics are not.</p>
             <p>Founded with the philosophy of <b>&quot;PEOPLE ARE OUR STRENGTH&quot;</b>, we are a growing, innovative company committed to quality service — building relationships that provide complete satisfaction and lead to lifetime partnerships.</p>
           </div>
         </div>
 
         <h2 className="secthead">Our Journey</h2>
-        <div className="roadwrap">
-          <svg className="roadsvg" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path className="tar" d="M 70 380 C 200 380 240 180 380 180 C 520 180 540 380 660 380 C 780 380 820 200 930 190" />
-            <path className="lane" d="M 70 380 C 200 380 240 180 380 180 C 520 180 540 380 660 380 C 780 380 820 200 930 190" />
-            <circle className="stop" cx="70" cy="380" r="15" /><circle className="stop2" cx="70" cy="380" r="6" />
-            <circle className="stop" cx="380" cy="180" r="15" /><circle className="stop2" cx="380" cy="180" r="6" />
-            <circle className="stop" cx="660" cy="380" r="15" /><circle className="stop2" cx="660" cy="380" r="6" />
-            <circle className="stop" cx="930" cy="190" r="15" /><circle className="stop2" cx="930" cy="190" r="6" />
-          </svg>
-          <div className="roadnode" style={{ left: "7%", top: "40%" }}><span className="yr">2018</span><b>Founded in Hyderabad</b><p>Two young professional minds with a vision for best-in-class electrical services.</p></div>
-          <div className="roadnode" style={{ left: "38%", top: "6%" }}><span className="yr">2020</span><b>Pune Branch</b><p>Expanding delivery across Maharashtra.</p></div>
-          <div className="roadnode" style={{ left: "66%", top: "40%" }}><span className="yr">2021</span><b>Bengaluru Branch</b><p>Serving projects across Karnataka.</p></div>
-          <div className="roadnode" style={{ left: "93%", top: "4%" }}><span className="yr">Today</span><b>250+ Projects · 13M+ Sq Ft</b><p>₹49 Cr group turnover · 24/7 service.</p></div>
-        </div>
+        <JourneyRoad />
         <div className="timeline">
-          <div className="tl"><span>2018</span><b>Founded in Hyderabad</b><p>Two young professional minds with a vision for best-in-class electrical services.</p></div>
-          <div className="tl"><span>2020</span><b>Pune branch</b><p>Expanding delivery across Maharashtra.</p></div>
-          <div className="tl"><span>2021</span><b>Bengaluru branch</b><p>Serving projects across Karnataka.</p></div>
-          <div className="tl"><span>Today</span><b>250+ projects · 13M+ sq ft</b><p>₹49 Cr group turnover with a 24/7 service department.</p></div>
+          <div className="tl"><span>2018</span><b>AJ Power Solutions founded</b><p>AJ Power Solutions journey started.</p></div>
+          <div className="tl"><span>2019</span><b>Emerging journey</b><p>Continued our emerging journey.</p></div>
+          <div className="tl"><span>2020</span><b>Pune office</b><p>New office set up at Pune, Maharashtra.</p></div>
+          <div className="tl"><span>2021</span><b>Bengaluru expansion</b><p>Expanded to Bangalore, Karnataka.</p></div>
+          <div className="tl"><span>2022</span><b>Tech Pi Solutions</b><p>Started visionary LT panel manufacturing unit, Tech Pi Solutions.</p></div>
+          <div className="tl"><span>2023</span><b>Raceway &amp; cable tray unit</b><p>Established raceway and cable tray manufacturing unit.</p></div>
+          <div className="tl"><span>2024</span><b>10+ million sq ft</b><p>Successfully completed 10+ million sq ft area.</p></div>
+          <div className="tl"><span>Present</span><b>250+ projects</b><p>Successfully completed 250+ projects.</p></div>
         </div>
 
         <h2 className="secthead">Values · Vision · Mission</h2>
@@ -52,7 +44,7 @@ export default function AboutPage() {
             <div className="ic" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3.2" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3" /></svg>
             </div>
-            <h3>Our Vision</h3><p>To provide interesting and challenging projects to empower — building South India&apos;s infrastructure.</p>
+            <h3>Our Vision</h3><p>To provide interesting and challenging projects to empower — building India&apos;s infrastructure.</p>
           </div>
           <div className="card">
             <div className="ic" aria-hidden="true">

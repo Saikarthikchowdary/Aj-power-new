@@ -7,8 +7,8 @@ import { SERVICES } from "@/lib/data";
 
 const STATS = [
   { to: 13, unit: "M+", prefix: "", label: "Sq Ft Executed" },
+  { to: 25, unit: "+", prefix: "", label: "Marquee Clients" },
   { to: 250, unit: "+", prefix: "", label: "Projects Delivered" },
-  { to: 49, unit: "Cr", prefix: "₹", label: "Group Turnover" },
   { to: 100, unit: "%", prefix: "", label: "Satisfaction Focus" },
 ];
 
@@ -19,7 +19,7 @@ export default function HomePage() {
         <HeroWall />
         <div className="glass">
           <div className="bname">AJ Power Solutions</div>
-          <h1>Empowering South India&rsquo;s Infrastructure with Specialized HT &amp; LT Electrification</h1>
+          <h1>Empowering India&rsquo;s Infrastructure with Specialized HT &amp; LT Electrification</h1>
           <p style={{ marginTop: 20 }}>
             Specialized Electrical Contractors and Engineers — delivering design, execution, testing and 24/7
             maintenance across IT parks, data centres, industries and hospitals.
