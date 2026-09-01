@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="page active">
-      <div className="litepage aboutpage"><div className="inwrap">
+      <div className="litepage"><div className="inwrap">
         <div className="abgrid" style={{ gridTemplateColumns: "1fr" }}>
           <div className="txt">
             <p><b>AJ POWER SOLUTIONS</b> is a leader in every aspect of electrical construction, maintenance and service — one of the reputed specialized HT &amp; LT electrical contractors across India for commercial, industrial, residential and IT sectors, equipped to handle the challenges and complexities of any job.</p>

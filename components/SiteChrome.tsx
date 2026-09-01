@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import PageBackground from "./PageBackground";
 import RevealObserver from "./RevealObserver";
 
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
@@ -12,6 +13,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
 
   return (
     <div className={isHome ? undefined : "v2-scope"}>
+      {!isHome && <PageBackground />}
       <Nav />
       <RevealObserver />
       {children}
